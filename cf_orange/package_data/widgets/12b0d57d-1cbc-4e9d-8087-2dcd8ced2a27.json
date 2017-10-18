@@ -6,7 +6,7 @@
       "treeview_image": "", 
       "uid": "12b0d57d-1cbc-4e9d-8087-2dcd8ced2a27", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "cforange_hierarchical_clustering", 
       "has_progress_bar": false, 
       "image": "", 

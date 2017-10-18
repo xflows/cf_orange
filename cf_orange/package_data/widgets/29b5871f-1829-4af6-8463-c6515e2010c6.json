@@ -6,7 +6,7 @@
       "treeview_image": "treeview/orange-ClassificationTree.png", 
       "uid": "29b5871f-1829-4af6-8463-c6515e2010c6", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "images/orange-ClassificationTree.png", 

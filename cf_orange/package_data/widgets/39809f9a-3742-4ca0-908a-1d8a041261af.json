@@ -6,7 +6,7 @@
       "treeview_image": "treeview/Orange-BuildClassifier.png", 
       "uid": "39809f9a-3742-4ca0-908a-1d8a041261af", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "images/Orange-BuildClassifier.png", 

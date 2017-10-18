@@ -6,7 +6,7 @@
       "treeview_image": "treeview/Orange-SelectAttributes_60.png", 
       "uid": "7b3455ff-5b2a-4c51-aa09-38dab4dfc2dc", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "select_attrs", 
       "has_progress_bar": false, 
       "image": "images/Orange-SelectAttributes_60.png", 

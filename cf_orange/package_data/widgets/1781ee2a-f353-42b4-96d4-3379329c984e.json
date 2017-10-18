@@ -6,7 +6,7 @@
       "treeview_image": "treeview/lookup.png", 
       "uid": "1781ee2a-f353-42b4-96d4-3379329c984e", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "images/lookup.png", 

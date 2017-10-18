@@ -6,7 +6,7 @@
       "treeview_image": "treeview/orange-kNN.png", 
       "uid": "f669618e-108c-4636-8ce5-ec04b26f4642", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "images/orange-kNN.png", 

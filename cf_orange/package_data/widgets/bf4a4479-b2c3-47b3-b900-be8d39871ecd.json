@@ -6,7 +6,7 @@
       "treeview_image": "treeview/orange-NaiveBayes.png", 
       "uid": "bf4a4479-b2c3-47b3-b900-be8d39871ecd", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "images/orange-NaiveBayes.png", 

@@ -6,7 +6,7 @@
       "treeview_image": "treeview/orange-C45.png", 
       "uid": "0e3f39fd-3807-49d5-aab5-4ae441cd9f75", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "images/orange-C45.png", 

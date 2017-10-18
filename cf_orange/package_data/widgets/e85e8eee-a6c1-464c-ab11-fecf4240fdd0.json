@@ -6,7 +6,7 @@
       "treeview_image": "treeview/ODT-to-ARFF-string.png", 
       "uid": "e85e8eee-a6c1-464c-ab11-fecf4240fdd0", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "images/ODT-to-ARFF-string.png", 

@@ -6,7 +6,7 @@
       "treeview_image": "treeview/orange-RandomForest.png", 
       "uid": "8ac403eb-cf44-41cb-b9a1-84dede03a1d4", 
       "is_streaming": false, 
-      "package": "cforange", 
+      "package": "cf_orange", 
       "interaction_view": "", 
       "has_progress_bar": false, 
       "image": "images/orange-RandomForest.png", 
