@@ -6,7 +6,7 @@ def cforange_filter_integers(request,input_dict,output_dict,widget):
 
 def cforange_hierarchical_clustering(request,input_dict,output_dict,widget):
     import Orange, orange, sys
-    from library import Clustering
+    from .library import Clustering
 
     sys.setrecursionlimit(10000)
 
@@ -73,7 +73,7 @@ def cforange_hierarchical_clustering(request,input_dict,output_dict,widget):
             try:
                 values_dict = dict([(x,matrix.items[node.first].name) for x in attributes]) if node.branches != None and (not node.branches) else {}
             except AttributeError as e:
-                print e, sys.exc_info()[0]
+                print(e, sys.exc_info()[0])
 
         for attribute in values_dict.keys():
             if type(values_dict[attribute]) == float:
@@ -112,8 +112,8 @@ def cforange_hierarchical_clustering(request,input_dict,output_dict,widget):
             hierarchy.append(build_hierarchy2(node, len(hierarchy)+len(stack)))
 
     hierarchy[0]['parent'] = -1;
-    for e in xrange(len(hierarchy)):
-        print hierarchy[e]
+    for e in range(len(hierarchy)):
+        print(hierarchy[e])
         if hierarchy[e]['children'] != []:
             hierarchy[hierarchy[e]['children'][0]]['parent'] = e;
             hierarchy[hierarchy[e]['children'][1]]['parent'] = e;

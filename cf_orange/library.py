@@ -385,7 +385,7 @@ def cforange_discretize(input_dict):
 
     if input_type == 'DBContext':
         output = input_obj.copy()
-        output.orng_tables = dict(zip(input_obj.tables, output_tables))
+        output.orng_tables = dict(list(zip(input_obj.tables, output_tables)))
     elif input_type != 'list':
         output = output_tables[0]
     else:
@@ -410,7 +410,7 @@ def cforange_attribute_distance(input_dict):
             if discretizedData is None:
                 try:
                     discretizedData = orange.Preprocessor_discretize(inputdata, method=orange.EquiNDiscretization(numberOfIntervals=4))
-                except orange.KernelException, ex:
+                except orange.KernelException as ex:
                     return None
             data = discretizedData
         else:
@@ -471,12 +471,12 @@ class Clustering:
         try:
             return orange.HierarchicalClustering(distance_matrix, linkage=linkages[linkage][1])
         except TypeError as e:
-            print "hierarchical_clustering:", sys.exc_info()[0]
-            print e
+            print("hierarchical_clustering:", sys.exc_info()[0])
+            print(e)
             #raise
 
 def cforange_hierarchical_clustering_finished(postdata, input_dict, output_dict):
-    print "cforange_hierarchical_clustering_finished"
+    print("cforange_hierarchical_clustering_finished")
     import json
     import Orange, orange
     
@@ -524,7 +524,7 @@ def cforange_hierarchical_clustering_finished(postdata, input_dict, output_dict)
     return {'centroids' : centroids, 'selected_examples' : selected_table, 'unselected_examples' : unselected_table}
 
 def cforange_odt_to_kdic(input_dict):
-    from odt_converters import toKDICstring, toKDICheader
+    from .odt_converters import toKDICstring, toKDICheader
     output_dict = {}
     f = toKDICheader(input_dict['odt'])
     output_dict['kdic'] = f.getvalue()
@@ -533,7 +533,7 @@ def cforange_odt_to_kdic(input_dict):
     return output_dict  
 
 def cforange_odt_to_prd_fct(input_dict):
-    from odt_converters import toPRDstring, toFCTstring
+    from .odt_converters import toPRDstring, toFCTstring
     output_dict = {}
     f = toPRDstring(input_dict['odt'])
     output_dict['prd'] = f.getvalue()
@@ -545,7 +545,7 @@ def filter_table(input_dict):
     return {'altered_data' : None}
 
 def filter_table_finished(postdata, input_dict, output_dict):
-    print postdata
+    print(postdata)
     import Orange
     from Orange.feature import Type
     widget_id = postdata['widget_id'][0]

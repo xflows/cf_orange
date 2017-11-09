@@ -1,7 +1,7 @@
 def toKDICheader(table, try_numericize = 0):
-    import cStringIO, string    
+    import io, string    
     t = table
-    f = cStringIO.StringIO()
+    f = io.StringIO()
 
     f.write('\nDictionary\t%s\n'%t.name)
     f.write('{\n')
@@ -34,9 +34,9 @@ def toKDICheader(table, try_numericize = 0):
     return f
 
 def toKDICstring(table):
-    import cStringIO, string    
+    import io, string    
     t = table
-    f = cStringIO.StringIO()
+    f = io.StringIO()
 
     ats = [i for i in t.domain.attributes]
     ats.append(t.domain.classVar)
@@ -65,9 +65,9 @@ def toKDICstring(table):
     return f
 
 def toPRDstring(table):
-    import cStringIO, string    
+    import io, string    
     t = table
-    f = cStringIO.StringIO()
+    f = io.StringIO()
 
     f.write('--INDIVIDUAL\n')
     f.write('%s 1 %s cwa\n' % (t.name,t.name))
@@ -85,9 +85,9 @@ def toPRDstring(table):
     return f
 
 def toFCTstring(table):
-    import cStringIO, string    
+    import io, string    
     t = table
-    f = cStringIO.StringIO()
+    f = io.StringIO()
 
     ats = [i for i in t.domain.attributes]
     ats.append(t.domain.classVar)       
