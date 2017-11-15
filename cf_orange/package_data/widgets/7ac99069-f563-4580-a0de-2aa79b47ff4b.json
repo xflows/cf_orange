@@ -12,7 +12,7 @@
       "image": "", 
       "description": "With the confusion matrix defined in terms of positive and negative classes, you can also compute the sensitivity [TP/(TP+FN)], specificity [TN/(TN+FP)], positive predictive value [TP/(TP+FP)] and negative predictive value [TN/(TN+FN)]. In information retrieval, positive predictive value is called precision (the ratio of the number of relevant records retrieved to the total number of irrelevant and relevant records retrieved), and sensitivity is called recall (the ratio of the number of relevant records retrieved to the total number of relevant records in the database). The harmonic mean of precision and recall is called an F-measure, where, depending on the ratio of the weight between precision and recall is implemented as F1 [2*precision*recall/(precision+recall)] or, for a general case, Falpha [(1+alpha)*precision*recall / (alpha*precision + recall)].", 
       "static_image": "ConfusionMatrix_60.png", 
-      "action": "cforange_confusion_matrix_computations", 
+      "action": "orange_cforange_confusion_matrix_computations",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

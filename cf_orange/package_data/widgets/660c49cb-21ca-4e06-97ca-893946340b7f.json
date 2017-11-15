@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Constructs and returns a new data set that includes a class and attributes from the list returned by function attMeasure that have the score above or equal to a specified threshold. data is used to pass an original data set. Parameter threshold is optional and defaults to 0.0.", 
       "static_image": "selectAttrsAboveThreshold.png", 
-      "action": "cforange_atts_above_thresh", 
+      "action": "orange_cforange_atts_above_thresh",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

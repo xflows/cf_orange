@@ -17,7 +17,7 @@
       "category": "d0e46009-46b3-43ed-bff0-5fc986ff6b34",
       "interactive": false,
       "uid": "29b5871f-1829-4af6-8463-c6515e2010c6",
-      "action": "class_tree",
+      "action": "orange_class_tree",
       "package": "cf_orange",
       "has_progress_bar": false,
       "visualization_view": "",

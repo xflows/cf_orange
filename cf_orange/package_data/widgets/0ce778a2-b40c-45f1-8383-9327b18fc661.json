@@ -12,7 +12,7 @@
       "image": "images/orange-Rule-Learner.png",
       "description": "A base rule induction learner. The algorithm follows separate-and-conquer strategy, which has its origins in the AQ family of algorithms (Fuernkranz J.; Separate-and-Conquer Rule Learning, Artificial Intelligence Review 13, 3-54, 1999). Such algorithms search for the optimal rule for the current training set, remove the covered training instances (separate) and repeat the process (conquer) on the remaining data.",
       "static_image": "orange-Rule-Learner.png",
-      "action": "rules",
+      "action": "orange_rules",
       "visualization_view": "",
       "streaming_visualization_view": "",
       "post_interact_action": "",

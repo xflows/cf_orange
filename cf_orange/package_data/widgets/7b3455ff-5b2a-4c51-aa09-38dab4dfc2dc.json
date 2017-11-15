@@ -12,7 +12,7 @@
       "image": "images/Orange-SelectAttributes_60.png", 
       "description": "Select Attributes widget is used to manually compose your data domain, that is, to decide which attributes will be used and how. Orange distinguishes between ordinary attributes, an (optional) class attributes and meta attributes.", 
       "static_image": "selectattributes.png", 
-      "action": "select_attrs", 
+      "action": "orange_select_attrs",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "select_attrs_post", 

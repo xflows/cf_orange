@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Computes the average probability assigned to the correct class.", 
       "static_image": "CCAP.png", 
-      "action": "cforange_average_probability", 
+      "action": "orange_cforange_average_probability",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Splits the data with a number of examples in the learning and the rest in the testing set. The test is repeated for a given number of times (default 10). Division is stratified by default. Function also accepts keyword arguments for randomization and storing classifiers.", 
       "static_image": "proportionTest.png", 
-      "action": "cforange_proportion_test", 
+      "action": "orange_cforange_proportion_test",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

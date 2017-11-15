@@ -17,7 +17,7 @@
       "category": "5723a5b8-8c18-4b1f-9398-e93828556c3c",
       "interactive": false,
       "uid": "9fb92534-94bf-4a07-a020-c01b20eaa00a",
-      "action": "cforange_example_distance",
+      "action": "orange_cforange_example_distance",
       "package": "cf_orange",
       "has_progress_bar": false,
       "visualization_view": "",

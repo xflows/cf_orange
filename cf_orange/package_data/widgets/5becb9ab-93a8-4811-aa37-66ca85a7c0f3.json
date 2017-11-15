@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Widget presents Orange Data Table in a spreadsheet format. Widget supports sorting by attribute values (click on the attribute name in the header row).", 
       "static_image": "table_viewer.png", 
-      "action": "table_viewer", 
+      "action": "orange_table_viewer",
       "visualization_view": "table_viewer", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

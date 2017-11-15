@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Computes the Brier's score, defined as the average (over test examples) of sumx(t(x)-p(x))^2, where x is a class, t(x) is 1 for the correct class and 0 for the others, and p(x) is the probability that the classifier assigned to the class x.", 
       "static_image": "BS.png", 
-      "action": "cforange_brier_score", 
+      "action": "orange_cforange_brier_score",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

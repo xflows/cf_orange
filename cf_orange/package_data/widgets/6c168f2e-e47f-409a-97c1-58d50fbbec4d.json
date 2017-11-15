@@ -12,7 +12,7 @@
       "image": "", 
       "description": "", 
       "static_image": "crossValidation.png", 
-      "action": "cforange_multiple_cross_validation", 
+      "action": "orange_cforange_multiple_cross_validation",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

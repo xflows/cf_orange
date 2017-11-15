@@ -12,7 +12,7 @@
       "image": "images/ODT-to-ARFF-string.png", 
       "description": "Transforms an orange data table to an arff string.", 
       "static_image": "ODT-to-ARFF-string.png", 
-      "action": "odt_to_arff", 
+      "action": "orange_odt_to_arff",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

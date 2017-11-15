@@ -12,7 +12,7 @@
       "image": "", 
       "description": "", 
       "static_image": "ARFF-to-ODT.png", 
-      "action": "load_dataset_from_arff_string", 
+      "action": "orange_load_dataset_from_arff_string",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

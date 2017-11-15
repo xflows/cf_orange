@@ -12,7 +12,7 @@
       "image": "", 
       "description": "It transforms a Orange Data Table into the Prd and Fct files used by Tertius, 1BC and 1BC2 widget. Its input is a Database context widget.", 
       "static_image": "", 
-      "action": "cforange_odt_to_prd_fct", 
+      "action": "orange_cforange_odt_to_prd_fct",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

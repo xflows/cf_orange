@@ -12,7 +12,7 @@
       "image": "images/orange-kNN.png", 
       "description": "The nearest neighbors algorithm is one of the most basic, lazy machine learning algorithms. The learner only stores the training data, and the classifier makes predictions based on the instances most similar to the data instance being classified.", 
       "static_image": "orange-kNN.png", 
-      "action": "knn", 
+      "action": "orange_knn",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

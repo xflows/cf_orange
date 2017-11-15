@@ -17,7 +17,7 @@
       "category": "aa3ed779-1e0b-4c6b-883e-24d85b9a6009",
       "interactive": false,
       "uid": "b16da039-f997-4d78-baa0-26d5ad8661eb",
-      "action": "cforange_prepare_results",
+      "action": "orange_cforange_prepare_results",
       "package": "cf_orange",
       "has_progress_bar": false,
       "visualization_view": "",

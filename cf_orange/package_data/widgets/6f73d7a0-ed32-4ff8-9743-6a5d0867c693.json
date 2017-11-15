@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Alter individual values in an Orange Data Table.", 
       "static_image": "alterTable.png", 
-      "action": "alter_table", 
+      "action": "orange_alter_table",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "alter_table_finished", 

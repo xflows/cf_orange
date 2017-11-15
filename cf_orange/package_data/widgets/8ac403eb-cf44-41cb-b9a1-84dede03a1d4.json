@@ -12,7 +12,7 @@
       "image": "images/orange-RandomForest.png", 
       "description": "Random forest is a classification technique that, given the set of class-labeled data, builds a set of classification trees. Each tree is developed from a bootstrap sample from the training data. When developing individual trees, an arbitrary subset of attributes is drawn (hence the term \u201crandom\u201d) from which the best attribute for the split is selected. The classification is based on the majority vote from individually developed tree classifiers in the forest.", 
       "static_image": "orange-RandomForest.png", 
-      "action": "random_forest", 
+      "action": "orange_random_forest",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

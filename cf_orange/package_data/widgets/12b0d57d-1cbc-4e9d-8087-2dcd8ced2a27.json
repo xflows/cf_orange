@@ -12,7 +12,7 @@
       "image": "", 
       "description": "The widget computes hierarchical clustering of arbitrary types of objects from the matrix of distances between them and shows the corresponding diagram. If the distances apply to examples, the widget offers some special functionality (adding cluster indices, outputting examples...).", 
       "static_image": "HierarchicalClustering_60.png", 
-      "action": "cforange_hierarchical_clustering", 
+      "action": "orange_cforange_hierarchical_clustering",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "cforange_hierarchical_clustering_finished", 

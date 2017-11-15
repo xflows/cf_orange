@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Used to visually represent classification trees.", 
       "static_image": "TreeVisualization.png", 
-      "action": "tree_visualization", 
+      "action": "orange_tree_visualization",
       "visualization_view": "tree_visualization", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

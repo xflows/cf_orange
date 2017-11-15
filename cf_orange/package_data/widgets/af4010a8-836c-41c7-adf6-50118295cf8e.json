@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Splits a dataset to a train and test dataset.", 
       "static_image": "split_dataset.png", 
-      "action": "cforange_split_dataset", 
+      "action": "orange_cforange_split_dataset",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

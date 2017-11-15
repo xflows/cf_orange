@@ -12,7 +12,7 @@
       "image": "images/Orange-BuildClassifier.png", 
       "description": "", 
       "static_image": "Orange-BuildClassifier.png", 
-      "action": "build_classifier", 
+      "action": "orange_build_classifier",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

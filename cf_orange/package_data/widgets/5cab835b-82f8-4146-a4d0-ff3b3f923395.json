@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Confusion Matrix gives the number/proportion of examples from one class classified in to another (or same) class. Besides that, selecting elements of the matrix feeds the corresponding examples onto the output signal. This way, one can observe which specific examples were misclassified in a certain way.", 
       "static_image": "ConfusionMatrix_60.png", 
-      "action": "cforange_confusion_matrix", 
+      "action": "orange_cforange_confusion_matrix",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

@@ -12,7 +12,7 @@
       "image": "images/orange-SelectData.png", 
       "description": "This widget allows the user to select a subset of the data from the input data set based on the condition defined over a set of data\u2019s attributes. Data instances that match the selection rule are placed on the output channel.", 
       "static_image": "orange-SelectData.png", 
-      "action": "select_data", 
+      "action": "orange_select_data",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "select_data_post", 

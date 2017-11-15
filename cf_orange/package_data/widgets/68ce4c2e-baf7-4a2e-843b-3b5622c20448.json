@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Constructs and returns a new data set that includes a class and only N best attributes from a list scores. data is used to pass an original data set.", 
       "static_image": "bestN.png", 
-      "action": "cforange_best_natts", 
+      "action": "orange_cforange_best_natts",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

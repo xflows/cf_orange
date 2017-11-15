@@ -12,7 +12,7 @@
       "image": "", 
       "description": "It generates files for khiops.", 
       "static_image": "", 
-      "action": "cforange_odt_to_kdic", 
+      "action": "orange_cforange_odt_to_kdic",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

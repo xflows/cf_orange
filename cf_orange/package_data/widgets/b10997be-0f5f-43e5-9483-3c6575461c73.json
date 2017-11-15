@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Computes the distances between the attributes in the data sets. Don\u2019t confuse it with a similar widget for computing the distances between examples.", 
       "static_image": "AttributeDistance.png", 
-      "action": "cforange_attribute_distance", 
+      "action": "orange_cforange_attribute_distance",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

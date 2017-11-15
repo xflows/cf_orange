@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Filter individual instances in an Orange Data Table.", 
       "static_image": "alterTable.png", 
-      "action": "filter_table", 
+      "action": "orange_filter_table",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "filter_table_finished", 

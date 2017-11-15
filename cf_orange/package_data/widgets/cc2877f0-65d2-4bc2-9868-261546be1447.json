@@ -12,7 +12,7 @@
       "image": "", 
       "description": "", 
       "static_image": "ROCAnalysis_60.png", 
-      "action": "cforange_auc", 
+      "action": "orange_cforange_auc",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

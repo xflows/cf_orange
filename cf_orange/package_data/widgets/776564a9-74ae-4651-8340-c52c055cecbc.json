@@ -12,7 +12,7 @@
       "image": "images/Load-ODT.png", 
       "description": "", 
       "static_image": "Load-ODT.png", 
-      "action": "load_dataset", 
+      "action": "orange_load_dataset",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

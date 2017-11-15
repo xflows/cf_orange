@@ -12,7 +12,7 @@
       "image": "images/UCI-2-ODT.png", 
       "description": "", 
       "static_image": "UCI-2-ODT.png", 
-      "action": "uci_to_odt", 
+      "action": "orange_uci_to_odt",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

@@ -17,7 +17,7 @@
       "category": "d0e46009-46b3-43ed-bff0-5fc986ff6b34",
       "interactive": false,
       "uid": "0e3f39fd-3807-49d5-aab5-4ae441cd9f75",
-      "action": "c45_tree",
+      "action": "orange_c45_tree",
       "package": "cf_orange",
       "has_progress_bar": false,
       "visualization_view": "",

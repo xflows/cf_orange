@@ -12,7 +12,7 @@
       "image": "images/orange-CN2-small.png", 
       "description": "Use this widget to learn a set of if-then rules from data. The algorithm is based on CN2 algorithm.", 
       "static_image": "orange-CN2-small.png", 
-      "action": "cn2", 
+      "action": "orange_cn2",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

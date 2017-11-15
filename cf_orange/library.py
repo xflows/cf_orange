@@ -1,3 +1,6 @@
+from .lib.learners import *
+from .lib.table_processing import *
+
 def cforange_split_dataset(input_dict):
     import orange
     output_dict = {}

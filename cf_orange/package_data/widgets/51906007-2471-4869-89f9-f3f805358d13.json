@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Returns the object stored in results, which essentially stores the probabilities and class values of the instances that were used as test cases.", 
       "static_image": "crossValidation.png", 
-      "action": "cforange_cross_validation", 
+      "action": "orange_cforange_cross_validation",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

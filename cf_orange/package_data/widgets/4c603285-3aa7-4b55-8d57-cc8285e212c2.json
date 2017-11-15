@@ -12,7 +12,7 @@
       "image": "images/add_noise3.png", 
       "description": "Adds class noise to a specified percentage of data instances.", 
       "static_image": "add_noise3.png", 
-      "action": "add_class_noise", 
+      "action": "orange_add_class_noise",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

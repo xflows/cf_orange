@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Discretizes continuous attrbutes from input data set.", 
       "static_image": "discretization.png", 
-      "action": "cforange_discretize", 
+      "action": "orange_cforange_discretize",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

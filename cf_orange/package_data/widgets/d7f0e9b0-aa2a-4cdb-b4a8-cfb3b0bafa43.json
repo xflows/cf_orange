@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Assesses features\u2019 ability to distinguish between very similar instances from different classes. This scoring method was first developed by Kira and Rendell and then improved by Kononenko.", 
       "static_image": "SE.png", 
-      "action": "cforange_score_estimation", 
+      "action": "orange_cforange_score_estimation",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

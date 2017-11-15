@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Performs a leave-one-out experiment with the given list of learners and examples. This is equivalent to performing len(examples)-fold cross validation. Function accepts additional keyword arguments for preprocessing, storing classifiers and verbose output.", 
       "static_image": "leaveOneOut.png", 
-      "action": "cforange_leave_one_out", 
+      "action": "orange_cforange_leave_one_out",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

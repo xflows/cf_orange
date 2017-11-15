@@ -12,7 +12,7 @@
       "image": "images/orange-NaiveBayes.png", 
       "description": "A Naive Bayes classifier is a probabilistic classifier that estimates conditional probabilities of the dependant variable from training data and uses them for classification of new data instances. The algorithm is very fast for discrete features, but runs slower for continuous features.", 
       "static_image": "orange-NaiveBayes.png", 
-      "action": "bayes", 
+      "action": "orange_bayes",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

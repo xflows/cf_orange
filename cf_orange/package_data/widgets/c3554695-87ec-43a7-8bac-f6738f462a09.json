@@ -12,7 +12,7 @@
       "image": "", 
       "description": "Computes classification accuracy, i.e. percentage of matches between predicted and actual class. The function returns a list of classification accuracies of all classifiers tested. If reportSE is set to true, the list will contain tuples with accuracies and standard errors.", 
       "static_image": "CA.png", 
-      "action": "cforange_classification_accuracy", 
+      "action": "orange_cforange_classification_accuracy",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

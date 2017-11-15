@@ -12,7 +12,7 @@
       "image": "", 
       "description": "One of the several alternative measures to be used to evaluate the success of numeric prediction.", 
       "static_image": "R2.png", 
-      "action": "cforange_R2", 
+      "action": "orange_cforange_R2",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

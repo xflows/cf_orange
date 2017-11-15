@@ -12,7 +12,7 @@
       "image": "", 
       "description": "One of the several alternative measures to be used to evaluate the success of numeric prediction.", 
       "static_image": "MSE2.png", 
-      "action": "cforange_RMSE", 
+      "action": "orange_cforange_RMSE",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

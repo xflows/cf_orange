@@ -12,7 +12,7 @@
       "image": "images/lookup.png", 
       "description": "Lookup classifiers predict classes by looking into stored lists of cases. A learner sorts the data instances and merges those with the same feature values.", 
       "static_image": "lookup.png", 
-      "action": "lookup_learner", 
+      "action": "orange_lookup_learner",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 

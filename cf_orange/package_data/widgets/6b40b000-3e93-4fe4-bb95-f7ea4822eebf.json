@@ -12,7 +12,7 @@
       "image": "images/orange-SVM_1.png", 
       "description": "Support vector machine learner.", 
       "static_image": "orange-SVM_1.png", 
-      "action": "svm", 
+      "action": "orange_svm",
       "visualization_view": "", 
       "streaming_visualization_view": "", 
       "post_interact_action": "", 
