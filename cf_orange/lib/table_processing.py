@@ -384,3 +384,6 @@ def filter_table_finished(postdata, input_dict, output_dict):
     # Parse the changes
     new_table = Orange.data.Table(input_dict['data']).getitems([int(x) for x in postdata.get('include',[])])
     return {'altered_data' : new_table}
+
+def orange_table_viewer(input_dict):
+    return {}

@@ -19,15 +19,19 @@ def orange_apply_classifier(input_dict):
     classifier = input_dict['classifier']
     data = input_dict['data']
 
-    new_domain = Domain(data.domain, classifier(data[0]).variable)
-    new_domain.add_metas(data.domain.get_metas())
+    Y=classifier(data)
 
-    new_data = Table(new_domain, data)
+    new_data=Table.from_numpy(data.domain, data.X, Y=Y,metas=data.metas)
 
-    for i in range(len(data)):
-        c = classifier(data[i])
-        new_data[i][c.variable.name] = c
-
+    # new_domain = Domain(data.domain, classifier(data[0]).class_variable)
+    # new_domain.add_metas(data.domain.get_metas())
+    #
+    # new_data = Table(new_domain, data)
+    #
+    # for i in range(len(data)):
+    #     c = classifier(data[i])
+    #     new_data[i][c.variable.name] = c
+    #
     output_dict = {'data': new_data}
 
     return output_dict
