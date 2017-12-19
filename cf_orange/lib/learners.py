@@ -156,7 +156,7 @@ def orange_load_dataset(input_dict):
 def orange_load_dataset_from_arff_string(input_dict):
     import tempfile
     f = tempfile.NamedTemporaryFile(delete=False, suffix='.arff')
-    f.write(input_dict['arff'])
+    f.write(bytes(input_dict['arff'], 'UTF-8'))
     f.close()
     output_dict = {}
     output_dict['dataset'] = Table(f.name)
