@@ -19,6 +19,7 @@ dist = setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Orange==2.5a4',
+        'Orange3==3.7.0',
+        'liac-arff'
     ],
 )

@@ -1,3 +1,31 @@
+from Orange.data import ContinuousVariable, DiscreteVariable, Domain, Table
+import arff
+
+
+def orange_load_dataset(input_dict):
+    output_dict = {}
+    output_dict['dataset'] = Table(input_dict['file'])
+    return output_dict
+
+
+def orange_load_dataset_from_arff_string(input_dict):
+    output_dict = {}
+    data = arff.loads(input_dict['arff'])
+    attributes = []
+    classVar = None
+    for idx, (att_name, values) in enumerate(data['attributes']):
+        if values == 'REAL':
+            att = ContinuousVariable(att_name)
+        else:
+            att = DiscreteVariable(att_name, values)
+        if idx == len(data['attributes'])-1:
+            classVar = att
+        else:
+            attributes.append(att)
+    domain = Domain(attributes, classVar)
+    data = Table.from_list(domain, data['data'])
+    output_dict['dataset'] = data
+    return output_dict
 
 def orange_select_attrs(input_dict):
     return input_dict

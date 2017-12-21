@@ -146,23 +146,6 @@ def orange_send_filename(input_dict):
     output_dict['filename'] = input_dict['fileloc'].strip('\"').replace('\\', '\\\\')
     return output_dict
 
-
-def orange_load_dataset(input_dict):
-    output_dict = {}
-    output_dict['dataset'] = Table(input_dict['file'])
-    return output_dict
-
-
-def orange_load_dataset_from_arff_string(input_dict):
-    import tempfile
-    f = tempfile.NamedTemporaryFile(delete=False, suffix='.arff')
-    f.write(bytes(input_dict['arff'], 'UTF-8'))
-    f.close()
-    output_dict = {}
-    output_dict['dataset'] = Table(f.name)
-    return output_dict
-
-
 # SATURATION NOISE FILTER
 
 def orange_saturation_filter(input_dict, widget):
