@@ -128,10 +128,7 @@ def treeToJSON(node, path="", nodes={}):
 
 
 def tree_visualization(request, input_dict, output_dict, widget):
-
     tc = input_dict['clt']
-
-    jsonJ = treeToJSON(tc.root)
-
+    tree_string = tc.print_tree() #'\n'.join(map(lambda x: x[4:], tc.print_tree().split('\n')))
     return render(request, 'visualizations/tree_visualization.html',
-                  {'widget': widget, 'input_dict': input_dict, 'json': jsonJ})
+                  {'widget': widget, 'input_dict': input_dict, 'tree_string': tree_string})
