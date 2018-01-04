@@ -1,44 +1,45 @@
 [
   {
-    "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "aa3ed779-1e0b-4c6b-883e-24d85b9a6009", 
-      "treeview_image": "", 
-      "uid": "6f475ead-0c0e-4b77-bc1a-ccfa7614962c", 
-      "is_streaming": false, 
-      "package": "cf_orange", 
-      "interaction_view": "", 
-      "has_progress_bar": false, 
-      "image": "", 
-      "description": "", 
-      "static_image": "ODT-to-TAB.png", 
+      "wsdl": "",
+      "has_progress_bar": false,
+      "windows_queue": false,
+      "order": 1,
+      "name": "Orange Data Table to TAB File",
+      "interaction_view": "",
+      "post_interact_action": "",
+      "visualization_view": "odt_to_tab",
+      "category": "aa3ed779-1e0b-4c6b-883e-24d85b9a6009",
+      "image": "",
       "action": "orange_string_to_file",
-      "visualization_view": "odt_to_tab", 
-      "streaming_visualization_view": "", 
-      "post_interact_action": "", 
-      "wsdl_method": "", 
-      "wsdl": "", 
-      "interactive": false, 
-      "windows_queue": false, 
-      "order": 1, 
-      "name": "Orange Data Table to TAB File"
-    }
-  }, 
+      "uid": "6f475ead-0c0e-4b77-bc1a-ccfa7614962c",
+      "streaming_visualization_view": "",
+      "treeview_image": "",
+      "always_save_results": false,
+      "is_streaming": false,
+      "wsdl_method": "",
+      "package": "cf_orange",
+      "description": "",
+      "interactive": false,
+      "static_image": "ODT-to-TAB.png"
+    },
+    "model": "workflows.abstractwidget"
+  },
   {
-    "model": "workflows.abstractinput", 
     "fields": {
-      "widget": "6f475ead-0c0e-4b77-bc1a-ccfa7614962c", 
-      "name": "Orange Data Table", 
-      "short_name": "odt", 
-      "default": "", 
-      "description": "", 
-      "required": false, 
-      "multi": false, 
-      "parameter_type": null, 
-      "variable": "data", 
-      "parameter": false, 
-      "order": 1, 
-      "uid": "1b6f9c59-36f1-4deb-bec7-c9633f6c7fd8"
-    }
+      "required": false,
+      "uid": "1b6f9c59-36f1-4deb-bec7-c9633f6c7fd8",
+      "multi": false,
+      "parameter_type": null,
+      "short_name": "odt",
+      "default": "",
+      "description": "",
+      "order": 1,
+      "name": "Orange Data Table",
+      "widget": "6f475ead-0c0e-4b77-bc1a-ccfa7614962c",
+      "parameter": false,
+      "variable": "data"
+    },
+    "model": "workflows.abstractinput"
   }
 ]

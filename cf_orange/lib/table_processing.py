@@ -1,6 +1,8 @@
 from Orange.data import ContinuousVariable, DiscreteVariable, Domain, Table
 import arff
 
+from cf_orange.lib.interval_discretizer import IntervalDiscretizer
+
 
 def orange_load_dataset(input_dict):
     output_dict = {}
@@ -18,7 +20,7 @@ def orange_load_dataset_from_arff_string(input_dict):
             att = ContinuousVariable(att_name)
         else:
             att = DiscreteVariable(att_name, values)
-        if idx == len(data['attributes'])-1:
+        if idx == len(data['attributes']) - 1:
             classVar = att
         else:
             attributes.append(att)
@@ -26,6 +28,7 @@ def orange_load_dataset_from_arff_string(input_dict):
     data = Table.from_list(domain, data['data'])
     output_dict['dataset'] = data
     return output_dict
+
 
 def orange_select_attrs(input_dict):
     return input_dict
@@ -274,18 +277,16 @@ def cforange_split_dataset(input_dict):
     import orange
     output_dict = {}
     data = input_dict['dataset']
-    selection = orange.MakeRandomIndices2(data,float(input_dict['p']))
-    train_data = data.select(selection,0)
-    test_data = data.select(selection,1)
-    output_dict['train_data']=train_data
-    output_dict['test_data']=test_data
+    selection = orange.MakeRandomIndices2(data, float(input_dict['p']))
+    train_data = data.select(selection, 0)
+    test_data = data.select(selection, 1)
+    output_dict['train_data'] = train_data
+    output_dict['test_data'] = test_data
     return output_dict
 
 
-
-
 def cforange_discretize(input_dict):
-    import orange
+    import Orange
     from collections import defaultdict
 
     input_obj = input_dict['dataset']
@@ -304,49 +305,27 @@ def cforange_discretize(input_dict):
 
     discretizerIndex = int(input_dict['discretizer_id'])
     discretizers = [
-        ("Equi-distant discretization",orange.EquiDistDiscretization), #numberOfIntervals
-        ("Quantile-based discretization", orange.EquiNDiscretization), #numberOfIntervals
-        ("Entropy-based discretization", orange.EntropyDiscretization), #no arguments
-        ("Bi-modal discretization", orange.BiModalDiscretization),#no arguments
-        ("Fixed discretization", orange.EquiNDiscretization)#FixedDiscretization) #points
+        ("Equal-width discretization", Orange.preprocess.discretize.EqualWidth),  # numberOfIntervals
+        ("Equal frequency discretization", Orange.preprocess.discretize.EqualFreq),  # numberOfIntervals
+        ("Entropy MDL discretization", Orange.preprocess.discretize.EntropyMDL),  # no arguments
     ]
 
     options = {}
     points = defaultdict(dict)
+    d = Orange.preprocess.Discretize()
     if not intervals:
-        if discretizerIndex in [4]:
-            #find all cut-off points
-            user_points = [float(a) for a in input_dict['points'].replace(" ","").split(",")]
-            options['points']=sorted(user_points)
-        elif discretizerIndex in [0,1]:
-            options['numberOfIntervals']=int(input_dict['numberOfIntervals'])
-
-    d = discretizers[discretizerIndex][1](**options)
+        if discretizerIndex in [0, 1]:
+            options['n'] = int(input_dict['numberOfIntervals'])
+        d.method = discretizers[discretizerIndex][1](**options)
+    else:
+        d.method = IntervalDiscretizer(points=intervals)
 
     for inputdata in input_tables:
-        newattrs = []
-        for attr in inputdata.domain.attributes:
-            if attr.varType == orange.VarTypes.Continuous:
-
-                if not intervals:
-                    # No intervals provided, calculate them
-                    newattr = d(attr,inputdata) if discretizerIndex in [0,2,3] else d.constructVariable(attr)
-                else:
-                    # Use the input interval dictionary
-                    attr_points = intervals[inputdata.name][attr.name]
-                    idisc = orange.IntervalDiscretizer(points = attr_points)
-                    newattr = idisc.constructVariable(attr)
-
-                newattr.name = attr.name
-                newattrs.append(newattr)
-                points[inputdata.name][attr.name] = newattr.get_value_from.transformer.points
-            else:
-                newattrs.append(attr)
-        name = inputdata.name
-        newdomain = orange.Domain(newattrs, inputdata.domain.classVar)
-        newdomain.addmetas(inputdata.domain.getmetas())
-        new_t = orange.ExampleTable(newdomain, inputdata)
-        new_t.name = name
+        new_t = d(inputdata)
+        # Save cutoff points
+        for att in new_t.domain:
+            if att.source_variable and att.source_variable.is_continuous:
+                points[inputdata.name][att.name] = att._compute_value.points
         output_tables.append(new_t)
 
     if input_type == 'DBContext':
@@ -360,16 +339,18 @@ def cforange_discretize(input_dict):
     output_dict = {'odt': output, 'discr_intervals': points}
     return output_dict
 
+
 def cforange_best_natts(input_dict):
     import orange
     import orngFSS
     data = input_dict['dataset']
     scores = input_dict['scores']
     n = int(input_dict['n'])
-    new_dataset = orngFSS.selectBestNAtts(data,scores,n)
-    output_dict={}
+    new_dataset = orngFSS.selectBestNAtts(data, scores, n)
+    output_dict = {}
     output_dict['new_dataset'] = new_dataset
     return output_dict
+
 
 def cforange_atts_above_thresh(input_dict):
     import orange
@@ -377,8 +358,8 @@ def cforange_atts_above_thresh(input_dict):
     data = input_dict['dataset']
     scores = input_dict['scores']
     thresh = float(input_dict['thresh'])
-    new_dataset = orngFSS.selectAttsAboveThresh(data,scores,thresh)
-    output_dict={}
+    new_dataset = orngFSS.selectAttsAboveThresh(data, scores, thresh)
+    output_dict = {}
     output_dict['new_dataset'] = new_dataset
     return output_dict
 
@@ -392,6 +373,7 @@ def cforange_odt_to_kdic(input_dict):
     output_dict['txt'] = f2.getvalue()
     return output_dict
 
+
 def cforange_odt_to_prd_fct(input_dict):
     from .odt_converters import toPRDstring, toFCTstring
     output_dict = {}
@@ -401,8 +383,10 @@ def cforange_odt_to_prd_fct(input_dict):
     output_dict['fct'] = f2.getvalue()
     return output_dict
 
+
 def filter_table(input_dict):
-    return {'altered_data' : None}
+    return {'altered_data': None}
+
 
 def filter_table_finished(postdata, input_dict, output_dict):
     print(postdata)
@@ -410,8 +394,9 @@ def filter_table_finished(postdata, input_dict, output_dict):
     from Orange.feature import Type
     widget_id = postdata['widget_id'][0]
     # Parse the changes
-    new_table = Orange.data.Table(input_dict['data']).getitems([int(x) for x in postdata.get('include',[])])
-    return {'altered_data' : new_table}
+    new_table = Orange.data.Table(input_dict['data']).getitems([int(x) for x in postdata.get('include', [])])
+    return {'altered_data': new_table}
+
 
 def orange_table_viewer(input_dict):
     return {}

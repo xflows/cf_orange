@@ -1,107 +1,108 @@
 [
   {
-    "model": "workflows.abstractwidget",
     "fields": {
-      "streaming_visualization_view": "",
-      "description": "",
-      "wsdl_method": "",
-      "post_interact_action": "",
-      "interaction_view": "",
-      "name": "Prepare Results for PR Visualization",
-      "windows_queue": false,
       "wsdl": "",
-      "image": "",
-      "is_streaming": false,
-      "static_image": "PR.png",
-      "order": 1,
-      "category": "aa3ed779-1e0b-4c6b-883e-24d85b9a6009",
-      "interactive": false,
-      "uid": "b16da039-f997-4d78-baa0-26d5ad8661eb",
-      "action": "orange_cforange_prepare_results",
-      "package": "cf_orange",
       "has_progress_bar": false,
+      "windows_queue": false,
+      "order": 1,
+      "name": "Prepare Results for PR Visualization",
+      "interaction_view": "",
+      "post_interact_action": "",
       "visualization_view": "",
-      "treeview_image": ""
-    }
+      "category": "aa3ed779-1e0b-4c6b-883e-24d85b9a6009",
+      "image": "",
+      "action": "orange_cforange_prepare_results",
+      "uid": "b16da039-f997-4d78-baa0-26d5ad8661eb",
+      "streaming_visualization_view": "",
+      "treeview_image": "",
+      "always_save_results": false,
+      "is_streaming": false,
+      "wsdl_method": "",
+      "package": "cf_orange",
+      "description": "",
+      "interactive": false,
+      "static_image": "PR.png"
+    },
+    "model": "workflows.abstractwidget"
   },
   {
-    "model": "workflows.abstractinput",
     "fields": {
-      "multi": false,
+      "required": false,
       "uid": "706ba66d-3425-4093-815f-8c62cc034e5b",
-      "name": "List of F-measures",
-      "parameter": false,
-      "description": "",
+      "multi": false,
+      "parameter_type": null,
       "short_name": "f",
-      "variable": "f",
+      "default": "",
+      "description": "",
       "order": 4,
-      "required": false,
+      "name": "List of F-measures",
       "widget": "b16da039-f997-4d78-baa0-26d5ad8661eb",
-      "default": "",
-      "parameter_type": null
-    }
+      "parameter": false,
+      "variable": "f"
+    },
+    "model": "workflows.abstractinput"
   },
   {
-    "model": "workflows.abstractinput",
     "fields": {
-      "multi": false,
+      "required": false,
       "uid": "8a484294-ded6-4ed9-8d4c-043fd8cb3eb7",
-      "name": "List of learners",
-      "parameter": false,
-      "description": "",
+      "multi": false,
+      "parameter_type": null,
       "short_name": "lrn",
-      "variable": "learners",
-      "order": 1,
-      "required": false,
-      "widget": "b16da039-f997-4d78-baa0-26d5ad8661eb",
       "default": "",
-      "parameter_type": null
-    }
+      "description": "",
+      "order": 1,
+      "name": "List of learners",
+      "widget": "b16da039-f997-4d78-baa0-26d5ad8661eb",
+      "parameter": false,
+      "variable": "learners"
+    },
+    "model": "workflows.abstractinput"
   },
   {
-    "model": "workflows.abstractinput",
     "fields": {
-      "multi": false,
+      "required": false,
       "uid": "91b5674a-88e7-4954-9117-46c1fbeb2d4c",
-      "name": "List of precisions",
-      "parameter": false,
-      "description": "",
-      "short_name": "pre",
-      "variable": "precision",
-      "order": 2,
-      "required": false,
-      "widget": "b16da039-f997-4d78-baa0-26d5ad8661eb",
-      "default": "",
-      "parameter_type": null
-    }
-  },
-  {
-    "model": "workflows.abstractinput",
-    "fields": {
       "multi": false,
-      "uid": "b1f16202-0bf3-4002-b534-3523c615d26f",
-      "name": "List of recalls",
-      "parameter": false,
-      "description": "",
-      "short_name": "rec",
-      "variable": "recall",
-      "order": 3,
-      "required": false,
-      "widget": "b16da039-f997-4d78-baa0-26d5ad8661eb",
+      "parameter_type": null,
+      "short_name": "pre",
       "default": "",
-      "parameter_type": null
-    }
+      "description": "",
+      "order": 2,
+      "name": "List of precisions",
+      "widget": "b16da039-f997-4d78-baa0-26d5ad8661eb",
+      "parameter": false,
+      "variable": "precision"
+    },
+    "model": "workflows.abstractinput"
   },
   {
-    "model": "workflows.abstractoutput",
     "fields": {
-      "short_name": "alp",
-      "variable": "alp",
-      "uid": "090071a2-fa72-4195-af38-31885d764207",
-      "order": 1,
+      "required": false,
+      "uid": "b1f16202-0bf3-4002-b534-3523c615d26f",
+      "multi": false,
+      "parameter_type": null,
+      "short_name": "rec",
+      "default": "",
+      "description": "",
+      "order": 3,
+      "name": "List of recalls",
       "widget": "b16da039-f997-4d78-baa0-26d5ad8661eb",
-      "name": "Algorithm performance",
-      "description": ""
-    }
+      "parameter": false,
+      "variable": "recall"
+    },
+    "model": "workflows.abstractinput"
+  },
+  {
+    "fields": {
+      "widget": "b16da039-f997-4d78-baa0-26d5ad8661eb",
+      "uid": "090071a2-fa72-4195-af38-31885d764207",
+      "short_name": "alp",
+      "description": "",
+      "variable": "alp",
+      "order": 1,
+      "name": "Algorithm performance"
+    },
+    "model": "workflows.abstractoutput"
   }
 ]

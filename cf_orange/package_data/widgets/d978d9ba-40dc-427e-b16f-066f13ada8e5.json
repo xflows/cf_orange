@@ -1,56 +1,57 @@
 [
   {
-    "model": "workflows.abstractwidget", 
     "fields": {
-      "category": "aa3ed779-1e0b-4c6b-883e-24d85b9a6009", 
-      "treeview_image": "", 
-      "uid": "d978d9ba-40dc-427e-b16f-066f13ada8e5", 
-      "is_streaming": false, 
-      "package": "cf_orange", 
-      "interaction_view": "", 
-      "has_progress_bar": false, 
-      "image": "", 
-      "description": "", 
-      "static_image": "ARFF-to-ODT.png", 
+      "wsdl": "",
+      "has_progress_bar": false,
+      "windows_queue": false,
+      "order": 1,
+      "name": "ARFF string to Orange Data Table",
+      "interaction_view": "",
+      "post_interact_action": "",
+      "visualization_view": "",
+      "category": "aa3ed779-1e0b-4c6b-883e-24d85b9a6009",
+      "image": "",
       "action": "orange_load_dataset_from_arff_string",
-      "visualization_view": "", 
-      "streaming_visualization_view": "", 
-      "post_interact_action": "", 
-      "wsdl_method": "", 
-      "wsdl": "", 
-      "interactive": false, 
-      "windows_queue": false, 
-      "order": 1, 
-      "name": "ARFF string to Orange Data Table"
-    }
-  }, 
+      "uid": "d978d9ba-40dc-427e-b16f-066f13ada8e5",
+      "streaming_visualization_view": "",
+      "treeview_image": "",
+      "always_save_results": false,
+      "is_streaming": false,
+      "wsdl_method": "",
+      "package": "cf_orange",
+      "description": "",
+      "interactive": false,
+      "static_image": "ARFF-to-ODT.png"
+    },
+    "model": "workflows.abstractwidget"
+  },
   {
-    "model": "workflows.abstractinput", 
     "fields": {
-      "widget": "d978d9ba-40dc-427e-b16f-066f13ada8e5", 
-      "name": "Arff string", 
-      "short_name": "arf", 
-      "default": "", 
-      "description": "", 
-      "required": false, 
-      "multi": false, 
-      "parameter_type": null, 
-      "variable": "arff", 
-      "parameter": false, 
-      "order": 1, 
-      "uid": "f05fee52-61fe-4f93-81a1-59fd9976fd3b"
-    }
-  }, 
+      "required": false,
+      "uid": "f05fee52-61fe-4f93-81a1-59fd9976fd3b",
+      "multi": false,
+      "parameter_type": null,
+      "short_name": "arf",
+      "default": "",
+      "description": "",
+      "order": 1,
+      "name": "Arff string",
+      "widget": "d978d9ba-40dc-427e-b16f-066f13ada8e5",
+      "parameter": false,
+      "variable": "arff"
+    },
+    "model": "workflows.abstractinput"
+  },
   {
-    "model": "workflows.abstractoutput", 
     "fields": {
-      "widget": "d978d9ba-40dc-427e-b16f-066f13ada8e5", 
-      "name": "Orange Data Table", 
-      "short_name": "odt", 
-      "description": "", 
-      "variable": "dataset", 
-      "order": 1, 
-      "uid": "cc43108f-9c7f-4da0-83f1-7fccacad9bc4"
-    }
+      "widget": "d978d9ba-40dc-427e-b16f-066f13ada8e5",
+      "uid": "cc43108f-9c7f-4da0-83f1-7fccacad9bc4",
+      "short_name": "odt",
+      "description": "",
+      "variable": "dataset",
+      "order": 1,
+      "name": "Orange Data Table"
+    },
+    "model": "workflows.abstractoutput"
   }
 ]
