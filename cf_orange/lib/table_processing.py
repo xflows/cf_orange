@@ -400,3 +400,9 @@ def filter_table_finished(postdata, input_dict, output_dict):
 
 def orange_table_viewer(input_dict):
     return {}
+
+
+def orange_select_target_values(input_dict):
+    data = input_dict['dataset']
+    target_data = data.Y.tolist()
+    return {'dataset': target_data}
