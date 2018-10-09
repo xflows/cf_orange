@@ -4,6 +4,8 @@ from django.shortcuts import render
 
 
 def orng_table_to_dict(data):
+    if data==None:
+        raise Exception("Empty dataset")
     attrs, metas, data_new = [], [], []
     try:
         class_var = data.domain.class_var.name

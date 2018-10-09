@@ -65,7 +65,7 @@ def orange_cn2(input_dict):
 
 def orange_svm(input_dict):
     output_dict = {}
-    output_dict['svmout'] = SVMLearner(name='SVM (Orange)')
+    output_dict['svmout'] = SVMLearner() #name='SVM (Orange)')
     return output_dict
 
 
@@ -77,7 +77,7 @@ def orange_svm(input_dict):
 
 def orange_class_tree(input_dict):
     output_dict = {}
-    output_dict['treeout'] = TreeLearner(name="Classification Tree (Orange)")
+    output_dict['treeout'] = TreeLearner() #name="Classification Tree (Orange)")
     return output_dict
 
 
@@ -89,13 +89,13 @@ def orange_class_tree(input_dict):
 
 def orange_logreg(input_dict):
     output_dict = {}
-    output_dict['logregout'] = LogisticRegressionLearner(name="Logistic Regression (Orange)")
+    output_dict['logregout'] = LogisticRegressionLearner() #name="Logistic Regression (Orange)")
     return output_dict
 
 
 def orange_majority_learner(input_dict):
     output_dict = {}
-    output_dict['majorout'] = MajorityLearner(name="Majority Classifier (Orange)")
+    output_dict['majorout'] = MajorityLearner() #name="Majority Classifier (Orange)")
     return output_dict
 
 
@@ -112,7 +112,7 @@ def orange_random_forest(input_dict):
     #     input_dict['n']) + " (Orange)')")
     # rfout.addimport("import orngEnsemble")
     # output_dict['rfout'] = rfout
-    output_dict['rfout']= RandomForestLearner(trees=input_dict['n'], name='RF' + str(input_dict['n']) + " (Orange)")
+    output_dict['rfout']= RandomForestLearner(n_estimators=input_dict['n']) #, name='RF' + str(input_dict['n']) + " (Orange)")
     return output_dict
 
 
