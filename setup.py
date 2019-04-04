@@ -9,9 +9,9 @@ CLASSIFIERS = [
 
 dist = setup(
     name='cf_orange',
-    version='0.1',
+    version='0.2',
     author='Anze Vavpetic',
-    description='Package providing Orange widgets for ClowdFlows 2.0',
+    description='Package providing Orange widgets for ClowdFlows 3.0',
     url='https://github.com/xflows/cf_orange',
     license='MIT License',
     classifiers=CLASSIFIERS,
