@@ -5,7 +5,7 @@ from .lib.scores import *
 from .lib.clustering import *
 
 
-def orange_cforange_multiple_cross_validation(input_dict):
+def cforange_multiple_cross_validation(input_dict):
     learners = input_dict['learners']
     data = input_dict['dataset']
     folds = int(input_dict['folds'])
