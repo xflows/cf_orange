@@ -1,3 +1,4 @@
+import Orange
 from .lib.learners import *
 from .lib.table_processing import *
 from .lib.scores import *
@@ -5,13 +6,12 @@ from .lib.clustering import *
 
 
 def cforange_multiple_cross_validation(input_dict):
-    import orange, orngTest, orngStat
     learners = input_dict['learners']
     data = input_dict['dataset']
     folds = int(input_dict['folds'])
-    results = orngTest.crossValidation(learners, data, folds=folds)
+    results = Orange.evaluation.CrossValidation(data, learners, k=folds)
     output_dict = {}
-    output_dict['results']=results
+    output_dict['results'] = results
     return output_dict
 
 def cforange_proportion_test(input_dict):
