@@ -1,7 +1,7 @@
 import Orange
 
 
-def orange_cforange_classification_accuracy(input_dict):
+def cforange_classification_accuracy(input_dict):
     results = input_dict['results']
     CAs = Orange.evaluation.scoring.CA(results)
     if len(CAs) == 1:
@@ -10,19 +10,6 @@ def orange_cforange_classification_accuracy(input_dict):
     output_dict['ca'] = CAs
     return output_dict
 
-def cforange_classification_accuracy(input_dict):
-    import orngStat
-    results = input_dict['results']
-    if input_dict['reportSE']=='true':
-        reportSE = True
-    else:
-        reportSE = False
-    CAs = orngStat.CA(results,reportSE=reportSE)
-    if len(CAs)==1:
-        CAs = CAs[0]
-    output_dict = {}
-    output_dict['ca']=CAs
-    return output_dict
 
 def cforange_average_probability(input_dict):
     import orngStat
