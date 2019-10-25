@@ -8,7 +8,19 @@ def orange_build_classifier(input_dict):
     learner = input_dict['learner']
     data = input_dict['data']
 
-    classifier = learner(data)
+    if len(data.domain.class_vars) == 1:
+        classifier = learner(data)
+    else:
+        # multi-label setting, learn one classifier for each label
+        classifier = []
+        for class_var in data.domain.class_vars:
+            classifier.append(
+                learner(
+                    Orange.data.Table.from_table(
+                        Orange.data.Domain(data.domain.attributes, class_vars=[class_var]), data
+                    )
+                )
+            )
 
     output_dict = {'classifier': classifier}
 
@@ -16,12 +28,25 @@ def orange_build_classifier(input_dict):
 
 
 def orange_apply_classifier(input_dict):
+    import numpy as np
+
     classifier = input_dict['classifier']
     data = input_dict['data']
+    if type(classifier) == list:
+        # multi-label setting, read probabilities for each predicted class
+        Y = np.zeros((data.n_rows, len(classifier)))
+        for i, c in enumerate(classifier):
+            Y[:, i] = c(data, 1)[:, 1]
+        new_domain = Orange.data.Domain(
+            data.domain.attributes, class_vars=[Orange.data.ContinuousVariable(x.name) for x in data.domain.class_vars]
+        )
+        new_data = Table.from_numpy(new_domain, data.X, Y=Y, metas=data.metas)
 
-    Y=classifier(data)
+    else:
+        Y=classifier(data)
+        new_data = Table.from_numpy(data.domain, data.X, Y=Y, metas=data.metas)
 
-    new_data=Table.from_numpy(data.domain, data.X, Y=Y,metas=data.metas)
+
 
     # new_domain = Domain(data.domain, classifier(data[0]).class_variable)
     # new_domain.add_metas(data.domain.get_metas())
