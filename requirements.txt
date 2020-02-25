@@ -1,2 +1,2 @@
-Orange3==3.7.0
+Orange3
 liac-arff

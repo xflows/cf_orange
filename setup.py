@@ -9,7 +9,7 @@ CLASSIFIERS = [
 
 dist = setup(
     name='cf_orange',
-    version='0.2',
+    version='0.2.1',
     author='Anze Vavpetic',
     description='Package providing Orange widgets for ClowdFlows 3.0',
     url='https://github.com/xflows/cf_orange',
@@ -19,7 +19,7 @@ dist = setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'Orange3==3.7.0',
+        'Orange3',
         'liac-arff'
     ],
 )
